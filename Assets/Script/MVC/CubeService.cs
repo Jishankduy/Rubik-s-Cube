@@ -5,9 +5,6 @@ using UnityEngine;
 public class CubeService : SingletonGeneric<CubeService>
 { 
     public CubeView cubeView;
-    /*public CubeController cubeController;
-    public CubeViewList cubeViewList;
-    public CubeScriptableObjectList CubeList;*/
 
     private void Start()
     {

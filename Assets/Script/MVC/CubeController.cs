@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeController
@@ -10,6 +8,9 @@ public class CubeController
     Vector3 previousMousePosition;
     Vector3 mouseDelta;
 
+    public CubeModel CubeModel { get; }
+    public CubeView CubeView { get; }
+
 
     public CubeController(CubeModel cubeModel, CubeView CubePrefeb)
     {
@@ -19,9 +20,6 @@ public class CubeController
         CubeView.SetCubeController(this);
         CubeModel.SetCubeController(this);
     }
-
-    public CubeModel CubeModel { get; }
-    public CubeView CubeView { get; }
 
     public void MouseButtonDown()
     {
@@ -69,7 +67,7 @@ public class CubeController
             {
                 CubeView.targest.transform.Rotate(0, 0, 90, Space.World);
             }
-            if (DownRightSwipe(currentSwipe))
+            else if (DownRightSwipe(currentSwipe))
             {
                 CubeView.targest.transform.Rotate(-90, 0, 0, Space.World);
             }

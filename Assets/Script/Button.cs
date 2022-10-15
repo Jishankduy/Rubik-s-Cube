@@ -7,33 +7,14 @@ public class Button : MonoBehaviour
 {
     public GameObject Help;
     public GameObject baseK;
-    bool Menu; 
-    //private Help button;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    bool basekIsEnabled;
+    bool helpIsEnabled;
+    
     public void PauseButton()
     {
-       if(Menu != true)
-        {
-            baseK.SetActive(false);
-            Menu = true;
-        }
-       else
-        {
-            baseK.SetActive(true);
-            Menu = false;
-        }
+
+        basekIsEnabled ^= true;
+        baseK.SetActive(basekIsEnabled);
         
     }
 
@@ -44,16 +25,9 @@ public class Button : MonoBehaviour
 
     public void HelpButton()
     {
-        if (Menu != true)
-        {
-            Help.SetActive(false);
-            Menu = true;
-        }
-        else
-        {
-            Help.SetActive(true);
-            Menu = false;
-        }
+        helpIsEnabled ^= true;
+        Help.SetActive(helpIsEnabled);
+        
     }
 
     public void QuitButton()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeModel :ScriptableObject
+public class CubeModel
 {
     private CubeController CubeController;
 
@@ -17,9 +17,9 @@ public class CubeModel :ScriptableObject
 
 
 
-    public void SetCubeController(CubeController _tankController)
+    public void SetCubeController(CubeController _cudeController)
     {
-        CubeController = _tankController;
+        CubeController = _cudeController;
     }
     
 

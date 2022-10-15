@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveParth : MonoBehaviour
@@ -8,7 +7,7 @@ public class MoveParth : MonoBehaviour
     public float dragSensitivity = 3.0f;
     public float snapSpeed = 90.0f;
 
-    Camera _camera;
+    private Camera _camera;
 
     Collider[] _subCubes = new Collider[9];
     Vector3[] _originalPositions = new Vector3[9];
@@ -108,9 +107,6 @@ public class MoveParth : MonoBehaviour
                 RotateGroup(angle, rotationAxis, subCubeCount);
                 yield return null;
             }
-
-            // Step 8: Loop back and wait for the next drag.
-            // TODO: Consider correcting for any accumulated rounding errors.
         }
     }
 
